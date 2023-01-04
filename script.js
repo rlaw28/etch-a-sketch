@@ -1,6 +1,6 @@
 
 const container = document.getElementById('container');
-
+const resetButton = document.getElementById('reset');
 
 const createGrid = (amtOfGrids) => {
     for (let i = 0; i < amtOfGrids; i++){
@@ -17,14 +17,20 @@ const createGrid = (amtOfGrids) => {
             gridBox.style.backgroundColor = 'black'
             })
             row.appendChild(gridBox)
+            resetButton.addEventListener('click', () => {
+            gridBox.style.backgroundColor = 'white'
+})
         }
         container.appendChild(row)
     }
 }
+
 let sizeOfGrid = 16;
 createGrid(sizeOfGrid);
 
-
+// resetButton.addEventListener('click', () => {
+//     gridBox.style.backgroundColor = 'white'
+// })
 
 
 
